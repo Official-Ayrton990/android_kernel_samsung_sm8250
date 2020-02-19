@@ -3124,7 +3124,7 @@ static inline void check_for_migration(struct rq *rq, struct task_struct *p) { }
 
 static inline int sched_boost(void)
 {
-	return 0;
+	return false;
 }
 
 static inline bool rt_boost_on_big(void)
@@ -3139,7 +3139,11 @@ static inline bool is_full_throttle_boost(void)
 
 static inline enum sched_boost_policy task_boost_policy(struct task_struct *p)
 {
+<<<<<<< HEAD
 	return SCHED_BOOST_NONE;
+=======
+	return false;
+>>>>>>> bd0598710eca (sched: Don't allow sched_boost to bias task placement)
 }
 
 static inline bool
