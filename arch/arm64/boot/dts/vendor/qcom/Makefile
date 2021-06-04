@@ -1,28 +1,19 @@
 ifeq ($(CONFIG_BUILD_ARM64_DT_OVERLAY),y)
         dtbo-$(CONFIG_ARCH_KONA) += \
-                kona-cdp-overlay.dtbo \
-                kona-cdp-lcd-overlay.dtbo \
-                kona-mtp-overlay.dtbo \
-                kona-mtp-ws-overlay.dtbo \
-		kona-sa-mtp-overlay.dtbo \
-                kona-xr-overlay.dtbo \
-                kona-rumi-overlay.dtbo \
-                kona-qrd-overlay.dtbo \
-		kona-xrfusion-overlay.dtbo \
-		kona-xrfusion-ult-overlay.dtbo \
-                kona-hdk-overlay.dtbo
+		kona-sec-system-update-overlay.dtbo \
+		kona-sec-gts7lwifi-eur-overlay-r02.dtbo \
+		kona-sec-gts7lwifi-eur-overlay-r03.dtbo \
+		kona-sec-gts7lwifi-eur-overlay-r04.dtbo \
+		kona-sec-gts7lwifi-eur-overlay-r05.dtbo \
+		kona-sec-gts7lwifi-eur-overlay-r06.dtbo \
+		kona-sec-gts7lwifi-eur-overlay-r07.dtbo
 
-kona-cdp-overlay.dtbo-base := kona.dtb kona-v2.dtb kona-v2.1.dtb
-kona-cdp-lcd-overlay.dtbo-base := kona.dtb kona-v2.dtb kona-v2.1.dtb
-kona-mtp-overlay.dtbo-base := kona.dtb kona-v2.dtb kona-v2.1.dtb
-kona-mtp-ws-overlay.dtbo-base := kona.dtb kona-v2.dtb kona-v2.1.dtb
-kona-sa-mtp-overlay.dtbo-base := kona.dtb kona-v2.dtb kona-v2.1.dtb
-kona-xr-overlay.dtbo-base := kona.dtb kona-v2.dtb kona-v2.1.dtb
-kona-rumi-overlay.dtbo-base := kona.dtb kona-v2.dtb kona-v2.1.dtb
-kona-qrd-overlay.dtbo-base := kona.dtb kona-v2.dtb kona-v2.1.dtb
-kona-xrfusion-overlay.dtbo-base := kona.dtb kona-v2.dtb kona-v2.1.dtb
-kona-xrfusion-ult-overlay.dtbo-base := kona.dtb kona-v2.dtb kona-v2.1.dtb
-kona-hdk-overlay.dtbo-base := kona.dtb kona-v2.dtb kona-v2.1.dtb
+kona-sec-system-update-overlay.dtbo-base := kona.dtb kona-v2.dtb kona-v2.1.dtb
+kona-sec-gts7lwifi-eur-overlay-r02.dtbo-base := kona.dtb kona-v2.dtb kona-v2.1.dtb
+kona-sec-gts7lwifi-eur-overlay-r03.dtbo-base := kona.dtb kona-v2.dtb kona-v2.1.dtb
+kona-sec-gts7lwifi-eur-overlay-r04.dtbo-base := kona.dtb kona-v2.dtb kona-v2.1.dtb
+kona-sec-gts7lwifi-eur-overlay-r05.dtbo-base := kona.dtb kona-v2.dtb kona-v2.1.dtb
+kona-sec-gts7lwifi-eur-overlay-r06.dtbo-base := kona.dtb kona-v2.dtb kona-v2.1.dtb
 else
 dtb-$(CONFIG_ARCH_KONA) += kona-rumi.dtb \
         kona-mtp.dtb \
