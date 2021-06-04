@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: GPL-2.0
 
 SAMSUMG_DTB := arch/$(SRCARCH)/boot/dts/samsung
-QCOM_DTB := ../vendor/qcom
+QCOM_DTB := arch/$(SRCARCH)/boot/dts/vendor/qcom
 
 define __sec_dtbo_build
 dtbo-$(2) += $(1)
@@ -18,7 +18,13 @@ SEC_KONA_BASE_DTB := $(QCOM_DTB)/kona.dtb $(QCOM_DTB)/kona-v2.dtb $(QCOM_DTB)/ko
 ifeq ($(CONFIG_BUILD_ARM64_DT_OVERLAY),y)
 
 SEC_KONA_SPU_DTBO := \
-		common/kona-sec-system-update-overlay.dtbo
+		common/kona-sec-system-update-overlay.dtbo \
+		gts7l/kona-sec-gts7lwifi-eur-overlay-r02.dtbo \
+		gts7l/kona-sec-gts7lwifi-eur-overlay-r03.dtbo \
+		gts7l/kona-sec-gts7lwifi-eur-overlay-r04.dtbo \
+		gts7l/kona-sec-gts7lwifi-eur-overlay-r05.dtbo \
+		gts7l/kona-sec-gts7lwifi-eur-overlay-r06.dtbo \
+		gts7l/kona-sec-gts7lwifi-eur-overlay-r07.dtbo
 
 $(eval $(call sec_dtbo_build, \
 		$(SEC_KONA_SPU_DTBO),$(CONFIG_ARCH_KONA),$(SEC_KONA_BASE_DTB)))
