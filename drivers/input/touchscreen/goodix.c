@@ -733,7 +733,7 @@ static int goodix_configure_dev(struct goodix_ts_data *ts)
 		return error;
 	}
 
-	ts->irq_flags = goodix_irq_flags[ts->int_trigger_type] | IRQF_ONESHOT;
+	ts->irq_flags = goodix_irq_flags[ts->int_trigger_type] | IRQF_ONESHOT | IRQF_PRIME_AFFINE;
 	error = goodix_request_irq(ts);
 	if (error) {
 		dev_err(&ts->client->dev, "request IRQ failed: %d\n", error);
