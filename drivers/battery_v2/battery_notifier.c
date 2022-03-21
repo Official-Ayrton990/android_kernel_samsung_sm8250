@@ -4,7 +4,6 @@
 #include <linux/battery/battery_notifier.h>
 #include <linux/sec_class.h>
 
-#define DEBUG
 #define SET_BATTERY_NOTIFIER_BLOCK(nb, fn, dev) do {	\
 		(nb)->notifier_call = (fn);		\
 		(nb)->priority = (dev);			\

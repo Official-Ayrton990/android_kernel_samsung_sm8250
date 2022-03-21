@@ -981,8 +981,6 @@ int set_freq_limit(unsigned long id, unsigned int freq)
 
 	mutex_lock(&cpufreq_limit_mutex);
 
-	pr_debug("%s: id(%d) freq(%d)\n", __func__, (int)id, freq);
-
 	for (i = 0; i < ARRAY_SIZE(cpufreq_limit_list); i++) {
 		list = &cpufreq_limit_list[i];
 		/* min lock */
