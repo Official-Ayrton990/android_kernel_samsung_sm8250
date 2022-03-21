@@ -1598,7 +1598,7 @@ static struct nvt_ts_platdata *nvt_ts_parse_dt(struct device *dev)
 		input_err(true, dev, "failed to get irq-gpio(%d)\n", platdata->irq_gpio);
 		return ERR_PTR(platdata->irq_gpio);
 	} else if (!platdata->irq_flags) {
-		platdata->irq_flags = IRQF_TRIGGER_LOW | IRQF_ONESHOT;
+		platdata->irq_flags = IRQF_TRIGGER_LOW | IRQF_ONESHOT | IRQF_PRIME_AFFINE;
 	}
 
 	ret = of_property_read_string(np, "novatek,firmware_name", &platdata->firmware_name);
