@@ -1,7 +1,6 @@
-name: "Action Build"
+name: "Build Kernel"
 on:
-  push:
-    branches: action_build
+  push: **
   workflow_dispatch:
 
 jobs:
